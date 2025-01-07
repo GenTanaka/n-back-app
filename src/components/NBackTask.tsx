@@ -213,7 +213,7 @@ export const NBackTask: React.FC<NBackTaskProps> = ({
         const trialText =
             trialIndex >= 1
                 ? `試行 ${trialIndex} / ${totalTrials}`
-                : `ウォーミングアップ (${digitIndex + 1}/${nValue})`;
+                : `試行前 (${digitIndex + 1}/${nValue})`;
 
         return (
             <div className="text-center mt-8 space-y-6">
@@ -223,22 +223,32 @@ export const NBackTask: React.FC<NBackTaskProps> = ({
                     {currentDigit !== null ? currentDigit : ""}
                 </div>
 
-                {showButtons && (
-                    <div className="flex justify-center gap-8 mt-4">
-                        <button
-                            onClick={() => handleAnswerClick(true)}
-                            className="px-6 py-3 bg-green-600 text-white font-semibold rounded hover:bg-green-700 transition"
-                        >
-                            同じ (L)
-                        </button>
-                        <button
-                            onClick={() => handleAnswerClick(false)}
-                            className="px-6 py-3 bg-red-600 text-white font-semibold rounded hover:bg-red-700 transition"
-                        >
-                            違う (A)
-                        </button>
-                    </div>
-                )}
+                {/* {showButtons && ( */}
+                <div className="flex justify-center gap-8 mt-4">
+                    <button
+                        onClick={() => handleAnswerClick(false)}
+                        className={`px-6 py-3  text-white font-semibold rounded transition ${
+                            showButtons
+                                ? "bg-red-600 hover:bg-red-700"
+                                : "bg-gray-600"
+                        }`}
+                        disabled={!showButtons}
+                    >
+                        違う (A)
+                    </button>
+                    <button
+                        onClick={() => handleAnswerClick(true)}
+                        className={`px-6 py-3  text-white font-semibold rounded transition ${
+                            showButtons
+                                ? "bg-green-600 hover:bg-green-700"
+                                : "bg-gray-600"
+                        }`}
+                        disabled={!showButtons}
+                    >
+                        同じ (L)
+                    </button>
+                </div>
+                {/* )} */}
             </div>
         );
     }

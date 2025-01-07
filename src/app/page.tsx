@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 export default function HomePage() {
     const [participantName, setParticipantName] = useState("");
-    const [nValue, setNValue] = useState();
+    const [nValue, setNValue] = useState(1);
 
     const router = useRouter();
 
@@ -33,10 +33,10 @@ export default function HomePage() {
 
     return (
         <div className="text-center mt-16">
-            <h1 className="text-4xl font-bold mb-12">N-back テスト</h1>
+            <h1 className="text-4xl font-bold mb-12">N-back課題</h1>
 
             <div className="mb-5">
-                <label className="font-bold mr-3">参加者名: </label>
+                <label className="font-bold mr-3">参加者名:</label>
                 <input
                     type="text"
                     value={participantName}
@@ -46,10 +46,11 @@ export default function HomePage() {
             </div>
 
             <div className="mb-5">
-                <label className="font-bold mr-3">N の数: </label>
+                <label className="font-bold mr-3">N の数:</label>
                 <input
                     type="number"
                     min={1}
+                    max={10}
                     value={nValue}
                     onChange={(e) => setNValue(Number(e.target.value))}
                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 p-2.5"
@@ -57,13 +58,23 @@ export default function HomePage() {
             </div>
 
             <div className="mb-5">
-                <button onClick={handleStartTest} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">テストを始める</button>
+                <button
+                    onClick={handleStartTest}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded"
+                >
+                    テストを始める
+                </button>
             </div>
 
             <hr style={{ width: "50%", margin: "20px auto" }} />
 
             <div className="mb-5">
-                <button onClick={handleTutorial} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">チュートリアルをやる</button>
+                <button
+                    onClick={handleTutorial}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded"
+                >
+                    チュートリアルをやる
+                </button>
             </div>
         </div>
     );

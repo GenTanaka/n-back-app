@@ -20,7 +20,7 @@ export default function TutorialPage() {
                 nValue={1}
                 trialCount={5}
                 participantName="(チュートリアル)"
-                targetRate={0.3}
+                targetRate={0.5}
                 localStorageKey="NBACK_TUTORIAL_RESULTS"
                 countdownStart={3}
                 onFinish={handleFinish}

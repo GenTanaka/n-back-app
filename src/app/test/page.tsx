@@ -26,11 +26,11 @@ export default function TestPage() {
     return (
         <div className="mx-auto max-w-3xl">
             <NBackTask
-                title={`N-back テスト (N=${nValue})`}
+                title={`N-back課題 (N=${nValue})`}
                 nValue={nValue}
                 trialCount={MAIN_TRIALS}
                 participantName={participantName}
-                targetRate={0.3}
+                targetRate={0.33}
                 localStorageKey="NBACK_RESULTS"
                 countdownStart={3}
                 onFinish={handleFinish}
