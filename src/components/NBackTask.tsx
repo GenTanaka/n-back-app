@@ -28,7 +28,7 @@ export const NBackTask: React.FC<NBackTaskProps> = ({
     nValue,
     trialCount,
     participantName,
-    targetRate = 0.3,
+    targetRate = 0.33,
     localStorageKey,
     countdownStart = 3,
     onFinish,
