@@ -5,13 +5,16 @@ import { useRouter } from "next/navigation";
 
 export default function HomePage() {
     const [participantName, setParticipantName] = useState("");
-    const [nValue, setNValue] = useState(2);
+    const [nValue, setNValue] = useState();
 
     const router = useRouter();
 
     const handleStartTest = () => {
         if (!participantName) {
             alert("参加者名を入力してください。");
+            return;
+        } else if (!nValue) {
+            alert("Nの数を入力してください。");
             return;
         }
         router.push(
