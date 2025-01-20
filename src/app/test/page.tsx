@@ -14,7 +14,7 @@ export default function TestPage() {
     const participantName = searchParams.get("participantName") || "";
     const nValue = Number(searchParams.get("nValue") || 2);
 
-    const handleFinish = (results: TrialResult[]) => {
+    const handleFinish = () => {
         router.push("/finish");
     };
 

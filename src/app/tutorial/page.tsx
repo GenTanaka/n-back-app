@@ -8,8 +8,8 @@ import { NBackTask } from "@/components/NBackTask";
 export default function TutorialPage() {
     const router = useRouter();
 
-    const handleFinish = (results: TrialResult[]) => {
-        router.push("/");
+    const handleFinish = () => {
+        router.push("/finish");
     };
 
     return (
