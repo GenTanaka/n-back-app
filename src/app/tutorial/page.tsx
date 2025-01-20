@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import { TrialResult } from "@/types";
 import { NBackTask } from "@/components/NBackTask";
 
 export default function TutorialPage() {

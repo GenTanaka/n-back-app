@@ -3,7 +3,6 @@
 import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { NBackTask } from "@/components/NBackTask";
-import { TrialResult } from "@/types";
 
 const MAIN_TRIALS = 20;
 
