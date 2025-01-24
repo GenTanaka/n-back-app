@@ -17,7 +17,7 @@ export default function TutorialPage() {
             <NBackTask
                 title="チュートリアル (N=1)"
                 nValue={1}
-                trialCount={5}
+                trialCount={10}
                 participantName="(チュートリアル)"
                 targetRate={0.5}
                 localStorageKey="NBACK_TUTORIAL_RESULTS"
